@@ -52,11 +52,16 @@ public static void main(String[] args) {
              JOptionPane.showMessageDialog(null, 
                      colaClientes.toString());
             }else if(opcion == 2){
-                NodoCola clienteAtendido = colaClientes.atiende();
+                if(!colaClientes.ColaVacia()){
+                    NodoCola clienteAtendido = colaClientes.atiende();
                 JOptionPane.showMessageDialog(null, 
                         "El cliente atendido es: " + 
                                 clienteAtendido.getCliente().toString());
                 listaFinalizados.inserta(clienteAtendido.getCliente());
+                }else{
+                     JOptionPane.showMessageDialog(null,"La cola está vacía");
+                }
+                
             }else if(opcion == 3){
              JOptionPane.showMessageDialog(null, 
                                     listaFinalizados.toString());

@@ -31,7 +31,7 @@ public class NodoCola {
 
     @Override
     public String toString() {
-      return "Nodo{" + "cliente=" + cliente + ", atras=" + atras + '}';
+      return "Nodo{" + "cliente=" + cliente ;
     }
     
 

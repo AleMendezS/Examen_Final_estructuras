@@ -50,12 +50,11 @@ public class Maleta {
     
     @Override
     public String toString() {
-        return "Maleta: " +"\n"
+        return "--------------------Maleta------------------- " +"\n"
                 + ", Ancho=" + ancho +" "
                 + ", Largo=" + largo +" "
                 + ", Fondo=" + fondo + '}'+" "
                 + ", Peso=" + peso +" "
-                + " Cliente ="+ cliente+" "
-                +"---------------Maleta-----------"+"\n";
+                + " Cliente ="+ cliente;
     }
 }
