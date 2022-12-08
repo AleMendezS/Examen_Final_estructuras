@@ -12,8 +12,10 @@ public static void main(String[] args) {
         ListaSimpleNoOrdenadaClientesFinalizados();
         ListaSimpleNoOrdenadaMaleta listaMaletas = new ListaSimpleNoOrdenadaMaleta();
 
-        String [] opciones={"Comprar boletos e ingresar maletas","Observar la cola","extraer primero",
-            "Mostrar finalizados","Ingresar maleta","Observar la lista de las maletas","Salir"};
+        String [] opciones={"Comprar boletos e ingresar maletas",
+            "Observar la cola","extraer primero",
+            "Mostrar finalizados","Ingresar maleta",
+            "Observar la lista de las maletas","Salir"};
 
         boolean op = true;
         while (op){
@@ -23,6 +25,7 @@ public static void main(String[] args) {
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null,
                     opciones, opciones[0]);
+            
             if (opcion == 0){
                 int edad = Integer.parseInt(JOptionPane.showInputDialog
                                             ("Digite la edad: "));
@@ -35,23 +38,28 @@ public static void main(String[] args) {
                 String correo = JOptionPane.showInputDialog
                                                 ("Digite su correo: ");
                 int telefono = Integer.parseInt
-            (JOptionPane.showInputDialog("Digite su telefono: "));
-                int numVuelo = Integer.parseInt(JOptionPane.showInputDialog("Digite " +
-                        "el numero de vuelo: "));
+                  (JOptionPane.showInputDialog("Digite su telefono: "));
+                int numVuelo = Integer.parseInt(JOptionPane.showInputDialog
+                                        ("Digite el numero de vuelo: "));
+                
                 Cliente cliente = new Cliente(nombre,apellido,cedula ,
                         correo,telefono,edad,numVuelo);
+                
                 colaClientes.encola(cliente);
                 
                 
             }else if(opcion == 1) {               
-             JOptionPane.showMessageDialog(null, colaClientes.toString());
+             JOptionPane.showMessageDialog(null, 
+                     colaClientes.toString());
             }else if(opcion == 2){
                 NodoCola clienteAtendido = colaClientes.atiende();
                 JOptionPane.showMessageDialog(null, 
-                        "El cliente atendido es: " + clienteAtendido.getCliente().toString());
+                        "El cliente atendido es: " + 
+                                clienteAtendido.getCliente().toString());
                 listaFinalizados.inserta(clienteAtendido.getCliente());
             }else if(opcion == 3){
-                JOptionPane.showMessageDialog(null, listaFinalizados.toString());
+             JOptionPane.showMessageDialog(null, 
+                                    listaFinalizados.toString());
             }else if(opcion == 4){
                 
                 int cedulaBuscar = Integer.parseInt(JOptionPane.showInputDialog
@@ -67,12 +75,15 @@ public static void main(String[] args) {
                 int peso = Integer.parseInt(JOptionPane.showInputDialog
                                     ("Digite el peso de la maleta: "));
                 
-                listaMaletas.insertaModificado(new Maleta(ancho,largo,fondo,peso,cliente));
+                listaMaletas.insertaModificado(new Maleta(ancho,largo,
+                                                        fondo,peso,cliente));
                 }else{
-                    JOptionPane.showMessageDialog(null,"El cliente no existe ");
+                    JOptionPane.showMessageDialog(null,
+                                            "El cliente no existe ");
                 }
             }else if(opcion == 5){
-               JOptionPane.showMessageDialog(null, listaMaletas.toString());
+               JOptionPane.showMessageDialog(null, 
+                                            listaMaletas.toString());
             }else if(opcion == 6){
                   op = false;
             }
