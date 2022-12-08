@@ -9,7 +9,7 @@ public class Cliente {
     private int telefonoEmergencia;
     private int edad;
     private int numeroVuelo;
-
+    
     public Cliente(String nombre, String apellidos, int cedula, String correo, 
             int telefonoEmergencia, int edad, int numeroVuelo) {
         this.nombre = nombre;

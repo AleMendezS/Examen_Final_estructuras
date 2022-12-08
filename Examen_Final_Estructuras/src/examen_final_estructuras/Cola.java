@@ -36,15 +36,8 @@ public class Cola {
         }
     }
     
-    public NodoCola extraer() {
-        NodoCola aux = frente;
-        if (frente != null) {
-            frente = frente.getAtras();
-            aux.setAtras(null);
-            largo--;
-        }
-        return aux;
-    }
+  
+    
     public Cliente extraer(int cedulaBuscar) {
         NodoCola aux = frente;
          Cliente cliente = null;
