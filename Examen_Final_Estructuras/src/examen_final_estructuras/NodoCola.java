@@ -2,15 +2,20 @@
 package examen_final_estructuras;
 
 public class NodoCola {
-    private String dato;
+    private Cliente cliente;
     private NodoCola atras;
 
-    public String getDato() {
-        return dato;
+    public NodoCola(Cliente cliente, NodoCola atras) {
+        this.cliente = cliente;
+        this.atras = atras;
     }
 
-    public void setDato(String dato) {
-        this.dato = dato;
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public NodoCola getAtras() {
@@ -21,11 +26,18 @@ public class NodoCola {
         this.atras = atras;
     }
 
-    public NodoCola(String dato) {
-        this.dato = dato;
-    }
-    
     @Override
-    public String toString(){ return dato; }
+    public String toString() {
+        return "NodoCola{" + "cliente=" + cliente + ", atras=" + atras + '}';
+    }
+
+    
+
+   
+
+  
+
+   
+   
     
 }

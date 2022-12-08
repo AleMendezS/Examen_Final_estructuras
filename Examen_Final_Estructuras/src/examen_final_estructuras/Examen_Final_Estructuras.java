@@ -7,14 +7,16 @@ public class Examen_Final_Estructuras {
   
 public static void main(String[] args) {
         Lista laLista = new Lista();
+        
 
-        String [] opciones={"Agregar Persona","Continuar"};
+        String [] opciones={"Comprar boletos","Observar la cola","extraer primero",
+            "Mostrar finalizados","Ingresar maletas","Observar la lista de las maletas"};
 
         boolean op = true;
         while (op){
             int opcion = JOptionPane.showOptionDialog(null,
                     "Seleccione una de las siguientes opciones:",
-                    "Segundo Examen",
+                    "Tercer Examen",
                     JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null,
                     opciones, opciones[0]);
@@ -25,7 +27,7 @@ public static void main(String[] args) {
                 String cedula = JOptionPane.showInputDialog("Digite el Cedula: ");
                 int vuelo = Integer.parseInt(JOptionPane.showInputDialog("Digite " +
                         "el numero de vuelo: "));
-                laLista.insertaCliente(new Clientes(edad, nombre,apellido,cedula ,vuelo));
+                laLista.insertaCliente(new Cliente(edad, nombre,apellido,cedula ,vuelo));
             }else {
                 op = false;
                 JOptionPane.showMessageDialog(null, laLista.toString());
