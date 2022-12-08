@@ -2,26 +2,23 @@
 package examen_final_estructuras;
 
 public class Cliente {
-    private int edad;
     private String nombre;
-    private String Apellidos;
+    private String apellidos;
     private int cedula;
+    private String correo;
+    private int telefonoEmergencia;
+    private int edad;
     private int numeroVuelo;
 
-    public Cliente(int edad, String nombre, String Apellidos, int cedula, int numeroVuelo) {
-        this.edad = edad;
+    public Cliente(String nombre, String apellidos, int cedula, String correo, 
+            int telefonoEmergencia, int edad, int numeroVuelo) {
         this.nombre = nombre;
-        this.Apellidos = Apellidos;
+        this.apellidos = apellidos;
         this.cedula = cedula;
-        this.numeroVuelo = numeroVuelo;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
+        this.correo = correo;
+        this.telefonoEmergencia = telefonoEmergencia;
         this.edad = edad;
+        this.numeroVuelo = numeroVuelo;
     }
 
     public String getNombre() {
@@ -33,11 +30,11 @@ public class Cliente {
     }
 
     public String getApellidos() {
-        return Apellidos;
+        return apellidos;
     }
 
-    public void setApellidos(String Apellidos) {
-        this.Apellidos = Apellidos;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public int getCedula() {
@@ -48,6 +45,30 @@ public class Cliente {
         this.cedula = cedula;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public int getTelefonoEmergencia() {
+        return telefonoEmergencia;
+    }
+
+    public void setTelefonoEmergencia(int telefonoEmergencia) {
+        this.telefonoEmergencia = telefonoEmergencia;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     public int getNumeroVuelo() {
         return numeroVuelo;
     }
@@ -56,18 +77,17 @@ public class Cliente {
         this.numeroVuelo = numeroVuelo;
     }
 
+    
     @Override
     public String toString() {
         return "\nCliente: " + "\n"
-                +"edad=" + edad + "\n"
-                + "nombre=" + nombre + "\n"
-                + "Apellidos=" + Apellidos + "\n"
-                + "cedula=" + cedula + "\n"
-                + "numeroVuelo=" + numeroVuelo + "\n"
+                +"Nombre=" + nombre + "\n"
+                + "Apellidos=" + apellidos + "\n"
+                + "Cedula=" + cedula + "\n"
+                + "Correo=" + correo + "\n"
+                + "Tel. Emergencia=" + telefonoEmergencia + "\n"
+                + "Edad=" + edad + "\n"
+                + "NumeroVuelo=" + numeroVuelo + "\n"
                 +"------------- Cliente -------------";
     }
-    
-    
-    
-    
 }

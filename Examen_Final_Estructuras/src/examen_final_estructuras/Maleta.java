@@ -2,41 +2,24 @@
 package examen_final_estructuras;
 
 public class Maleta {
-    
-    private int cedulaCliente;
-    private int peso;
-    private int longitud;
+    private int ancho;
     private int largo;
-
-    public Maleta(int cedulaCliente, int peso, int longitud, int largo) {
-        this.cedulaCliente = cedulaCliente;
-        this.peso = peso;
-        this.longitud = longitud;
+    private int fondo;
+    private int peso;
+    
+    public Maleta(int ancho, int largo, int fondo, int peso) {
+        this.ancho = ancho;
         this.largo = largo;
-    }
-
-    public int getCedulaCliente() {
-        return cedulaCliente;
-    }
-
-    public void setCedulaCliente(int cedulaCliente) {
-        this.cedulaCliente = cedulaCliente;
-    }
-
-    public int getPeso() {
-        return peso;
-    }
-
-    public void setPeso(int peso) {
+        this.fondo = fondo;
         this.peso = peso;
     }
 
-    public int getLongitud() {
-        return longitud;
+    public int getAncho() {
+        return ancho;
     }
 
-    public void setLongitud(int longitud) {
-        this.longitud = longitud;
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
     }
 
     public int getLargo() {
@@ -47,15 +30,29 @@ public class Maleta {
         this.largo = largo;
     }
 
+    public int getFondo() {
+        return fondo;
+    }
+
+    public void setFondo(int fondo) {
+        this.fondo = fondo;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+    
     @Override
     public String toString() {
         return "Maleta: " +"\n"
-                + "cedulaCliente=" + cedulaCliente +"\n"
-                + ", peso=" + peso +"\n"
-                + ", longitud=" + longitud +"\n"
-                + ", largo=" + largo + '}'+"\n"
+                + ", Ancho=" + ancho +"\n"
+                + ", Largo=" + largo +"\n"
+                + ", Fondo=" + fondo + '}'+"\n"
+                + ", Peso=" + peso +"\n"
                 +"---------------Maleta-----------"+"\n";
     }
-    
-    
 }
