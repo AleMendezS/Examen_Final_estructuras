@@ -1,7 +1,7 @@
 package examen_final_estructuras;
 
 public class NodoClientesFinalizados {
-    private Maleta dato;
+    private Cliente dato;
     private NodoClientesFinalizados next;
     
     @Override
@@ -9,15 +9,15 @@ public class NodoClientesFinalizados {
         return "Nodo{"+"dato="+dato+'}';
     }
     
-    public NodoClientesFinalizados(Maleta dato){
+    public NodoClientesFinalizados(Cliente dato){
         this.dato=dato;
     }
 
-    public Maleta getDato() {
+    public Cliente getDato() {
         return dato;
     }
 
-    public void setDato(Maleta dato) {
+    public void setDato(Cliente dato) {
         this.dato = dato;
     }
 

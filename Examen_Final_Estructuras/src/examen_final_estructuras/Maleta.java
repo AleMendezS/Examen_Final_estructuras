@@ -6,12 +6,14 @@ public class Maleta {
     private int largo;
     private int fondo;
     private int peso;
+    private Cliente cliente;
     
-    public Maleta(int ancho, int largo, int fondo, int peso) {
+    public Maleta(int ancho, int largo, int fondo, int peso, Cliente cliente) {
         this.ancho = ancho;
         this.largo = largo;
         this.fondo = fondo;
         this.peso = peso;
+        this.cliente = cliente;
     }
 
     public int getAncho() {
@@ -49,10 +51,11 @@ public class Maleta {
     @Override
     public String toString() {
         return "Maleta: " +"\n"
-                + ", Ancho=" + ancho +"\n"
-                + ", Largo=" + largo +"\n"
-                + ", Fondo=" + fondo + '}'+"\n"
-                + ", Peso=" + peso +"\n"
+                + ", Ancho=" + ancho +""
+                + ", Largo=" + largo +""
+                + ", Fondo=" + fondo + '}'+""
+                + ", Peso=" + peso +""
+                + " Cliente ="+ cliente+""
                 +"---------------Maleta-----------"+"\n";
     }
 }

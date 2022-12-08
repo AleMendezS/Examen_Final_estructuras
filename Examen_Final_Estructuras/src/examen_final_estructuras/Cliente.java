@@ -81,13 +81,13 @@ public class Cliente {
     @Override
     public String toString() {
         return "\nCliente: " + "\n"
-                +"Nombre=" + nombre + "\n"
-                + "Apellidos=" + apellidos + "\n"
-                + "Cedula=" + cedula + "\n"
-                + "Correo=" + correo + "\n"
-                + "Tel. Emergencia=" + telefonoEmergencia + "\n"
-                + "Edad=" + edad + "\n"
-                + "NumeroVuelo=" + numeroVuelo + "\n"
-                +"------------- Cliente -------------";
+                +"Nombre=" + nombre + ""
+                + "Apellidos=" + apellidos + ""
+                + "Cedula=" + cedula + ""
+                + "Correo=" + correo + ""
+                + "Tel. Emergencia=" + telefonoEmergencia + ""
+                + "Edad=" + edad + ""
+                + "NumeroVuelo=" + numeroVuelo + ""
+                +"------------- Cliente -------------\n";
     }
 }
